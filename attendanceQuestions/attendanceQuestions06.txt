@@ -1,0 +1,31 @@
+1. empty object - has nothing to do with anything other than undefined
+   null - when a function or method doesnt have any object to return. Null and undefined are non-type
+   equivalent 
+   undefined - when a variable doesnt have a value, neither null nor undefined exactly 
+               mean theres something wrong. 
+   NaN - Not a number but represents all numbers that cant be represented in JS.  
+   infinity - represents all numbers that you can represent (why infi - infi = NaN).
+   [] - an empty array is true.
+   {} - just an empty set.  
+2. undefined - undefined is a value and has a type of undefined. Undefined is basically a placeholder.
+   NaN - NaN is all the numbers that arent able to be represented and doesnt have a value but is of 
+         type number. 
+3.  NaN isn’t equal to anything, no number no value it is just a representation, therefore NaN is 
+    not equal to itself. 10 / 0 = infinity  
+4. NaN - NaN is of type number 
+   Infinity - Infinity = NaN
+   null - type object 
+5. If JS is trying to compare strings and numbers together, it will convert the string to a number 
+   and if the string isnt convertable it will convert to NaN. if you have any other 2 types they will
+   be converted to numbers. Booleans to 0 and 1. Undefined and Null are "no values" and are therefore equal.
+   You can get strict with equality using === (same type and value).
+6. Yes, there is !=== comparing inequality between the type AND the value.
+7. var num =  Number("insert number here");
+8. undefined, 0, null, NaN, and "" are all falsey, this means that everything else is truthy. Truthy and 
+   falsey are used in conditional tests and could be seen as almost true or almost false since JS is 
+   loose on these definitions. 
+9.  with JavaScript you can create a string that is a primitive, and you can also create one that is an 
+    object. This is done when using a method and the code needs a string object to do something with it.
+    This is all done by JS. (also when using other object string properties very useful)
+10. === Compares object references and returns true if they are the same and false otherwise.
+

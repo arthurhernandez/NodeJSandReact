@@ -1,0 +1,18 @@
+1. The value of this is set to the object when you call the method.
+2. Dot notation gives access to an objects properties and what they hold. It is comparable to 
+   arrays and [] where you are accessing whatever is at the fourth position using array[4]
+3. delete is a built in function that can be used to delete properties in objects returning true unless 
+   it is unable to delete the function (true even if the function doesnt exist). 
+4. State is the state of being of an oject, what it is, what it has, ect. while behavior is how that 
+   object moves, wether it can, cannot, is moving, ect. 
+5. JSON allows for the exchange of objects with other applications 
+6. Regular expressions /pattern/ provide compilations of patterns in text when the script is loaded.
+7. DOM or document object model is a set of objects that represent HTML markup used by JS.
+   JS can interact with the DOM to get access to elements and the content in them. JS
+   can also use the DOM to create, remove, or modify HTML.
+8. an element object  is the browser’s internal representation of what you type into your HTML and 
+   can be used to read, change, remove, or replace an element’s content and attributes.
+9. Event handlers and callbacks are the same thing. They call a function or part of code to run
+   once the event that they are waiting for has happened.  
+10. HTML and CSS and DOM are all connected and controlled by DOM and the way it is manipulated.
+

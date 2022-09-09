@@ -1,0 +1,36 @@
+1. "You can pass pretty much any JavaScript value as an argument, like a
+   string, a boolean, or a number", variables, and expressions. 
+2. Each argument is copied into the parameter variable. That basically means
+   the argument and parameter are a "bucket" that takes a copy of arg and gives 
+   it to the param (they can both be named differently).
+3. The return statement includes a value or an expression, which is returned 
+   as a result of calling the function.
+4. A function without a return statement returns undefined.
+5. Global variables are accessible everywhere in a program declared outside
+   any function while local variables are delclared inside a function and only 
+   accessible in that scope.
+6. It gets created in the global object as a global variable
+7. argument - a value, var, or staement that is passed to a function. 
+   parameter -  defined in the function definition are ussually vars that 
+                hold the arguments and are used in a function.
+   scope - a scope is seperated by curly brackets and anything inside is ran together.
+           Vars declared inside the scope cannot be used outside of it
+   function - a function has to be declared with "function" and a name
+              with or without parameters. Everything inside the function is ran when
+              the function is called
+   function call - what is used to run a function. uses arguments set in it as the
+                   parameters for the function
+   built-in functions - functions already set inside of the Javascript language such as
+                        the Math, alert, prompt, and console.log you cant write yourself
+   code reuse - using the same function many times by calling it more than once could be 
+                with multiple parameters
+8. define - var defArr = array;
+   create - var array = new array();
+   allocate - array[1] = 4;
+   initialize - var array = [elem,...]; or var emptyArr = [];
+   use - var arrayElemTwo = array[1]; var arrayLen = array.length;
+9. No, they don't have to be the same type.
+10. Function calls dont have to have the same amount of arguments as the parameters for the function.
+    if too many arguments are passed extras will be ignored.
+
+

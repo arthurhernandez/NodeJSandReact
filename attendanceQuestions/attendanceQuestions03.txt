@@ -1,0 +1,12 @@
+1. As many things as possible before you run out of memory or your machine cannot handle it anymore.
+2. Var lastElem = array[array.length - 1];
+3. The result will be undefined. 
+4. Yes, you can have an empty array.
+5. Yes, while loops and for loops are equivalent in expressive power.
+6. All the indecies in betweeen will be undefined 
+7. Yes, you can use var array = new Array(3); setting 3 undefined indeces in array 
+8. Obejcts are a collection of properties or variables. var object = { nameOfObjectProperty: elem, ...}  
+9. As many or as little amount of properties as needed.
+10. adding and deleting properties can be done with the 
+    delete keyword. JS seems very user friendly without mem allocation or difficult syntax. 
+

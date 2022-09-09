@@ -1,0 +1,24 @@
+--------------------------------
+
+Set up database:
+
+mongod port = 37550
+makenobackup
+cd /nobackup/aohernan
+mkdir demo
+cd demo
+mkdir documnets
+numactl --interleave=all mongod -port 37550 --dbpath documnets
+
+---------------------------
+
+check database results:
+ after closing node:
+mongo silo.cs.indiana.edu:37550
+show dbs
+use confetti_cuisine
+show collections
+var a = db.getCollection("subscribers")
+a.find()
+
+----------------------------

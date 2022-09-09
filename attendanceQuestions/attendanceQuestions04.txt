@@ -1,0 +1,13 @@
+1. var emptyObj = { };
+2. in order to start with an object that you dont know the properties of and add them dynamically 
+3. you will just be changing the value of the property to whatever it is you are trying to add 
+4. you will get an undefined answer 
+5. most of the time you wont get any error unless working on an old browser  
+6. Yes, you can console.log(object) to get the the properites and their values in the console.
+7. primitive types are your basic int, string types holding elements but reference types hold 
+   pointers (a way to get to the variable) to those variables and their elements. 
+8. this is like a variable used that is used the object whose method was just called. 
+   It also tells java to use the object you are currently in when inside objects 
+9. methods are functions assigned to properties inside of objects.
+10. Yes, you can add a method to an object after making an object.
+

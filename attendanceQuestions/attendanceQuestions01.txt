@@ -1,0 +1,16 @@
+1. No, other than some syntax similarities 
+2. Yes, JavaScript is case sensitive 
+3. A block of code is statements in between curly braces that are treated as a group and ran together 
+4. document write should only be used for testing but writes or outputs whatever message you want to the document.
+   console log writes messages to the console log for debugging. Alerting also outputs whatever message you
+   want to the browser in a dialog box. DOM is an object-oriented representation of the
+   web page that you make and change with JavaScript 
+5. = is used to assigning variable, == is for comparing variables, and === can check datatypes and compares their values
+6. an infinite loop is a loop that never stops because it is never told to. it creates a forever running program within 
+   whatever the loop contains
+7. || would be a OR a++ which would be true instead of a && (AND) a++ which would be false 
+8. var randInt = Math.floor(Math.random() * 5);
+9. a = b+1
+10. JavaScripts syntax is very simple yet very powerful, powerful enough to control the elements of other languages and you are able to implement js code in scripts. 
+
+

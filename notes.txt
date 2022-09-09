@@ -1,0 +1,158 @@
+
+
+let keyword in REPL to set scoped variable 
+
+HTTP methods and verbs:
+
+  GET—This method requests information from a server. Typically, a server
+  responds with content that you can view back on your browser (such as by clicking a link to see the home page of a site).
+
+  POST—This method sends information to the server. A server may respond with
+  an HTML page or redirect you to another page in the application after processing your data (such as filling out and submitting a sign-up form)
+
+MAKE A SERVER
+
+[aohernan@silo second_server]$ pwd
+/u/aohernan/a290-js-workspace/second_server
+[aohernan@silo second_server]$ ls
+[aohernan@silo second_server]$ nano main.js
+[aohernan@silo second_server]$ main is blank
+-bash: main: command not found
+[aohernan@silo second_server]$ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg> --save` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+name: (second_server) second_server
+version: (1.0.0) 
+description: My second server!
+entry point: (main.js) 
+test command: 
+git repository: 
+keywords: 
+author: Arthur Hernandez
+license: (ISC) 
+About to write to /nfs/nfs7/home/aohernan/a290-js-workspace/second_server/package.json:
+
+{
+  "name": "second_server",
+  "version": "1.0.0",
+  "description": "My second server!",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arthur Hernandez",
+  "license": "ISC"
+}
+
+
+Is this ok? (yes) 
+[aohernan@silo second_server]$ npm install http
+second_server@1.0.0 /nfs/nfs7/home/aohernan/a290-js-workspace/second_server
+└── http@0.0.1-security 
+
+npm WARN second_server@1.0.0 No repository field.
+[aohernan@silo second_server]$ npm install http-status-codes
+second_server@1.0.0 /nfs/nfs7/home/aohernan/a290-js-workspace/second_server
+└── http-status-codes@2.1.4 
+
+npm WARN second_server@1.0.0 No repository field.
+
+-----------------------
+inside of main.js use:
+
+const port = 3000,
+ http = require("http"),
+ httpStatus = require("http-status-codes"),
+ app = http.createServer((request, response) => {
+ console.log("Received an incoming request!");
+ response.writeHead(httpStatus.OK, {
+"Content-Type": "text/html"
+ });
+ let responseMessage = "<h1>Hello, Universe!</h1>";
+ response.write(responseMessage);
+ response.end();
+ console.log(`Sent a response : ${responseMessage}`);
+ });
+app.listen(port);
+console.log(`The server has started and is listening on port number: ${port}`);
+
+--------------
+then run:
+
+-bash-4.2$ npm start
+
+> node server.js
+
+-------------------------------------------------------
+
+Logging request data in main.js:
+
+ console.log(req.method);
+ console.log(req.url);
+ console.log(req.headers);
+
+-----------------------------------------------------
+
+using a second terminal and using input notation as in the second example 
+of a server, you can  curl --data "username=
+Jon&password=secret" http://localhost:3000 and have it passed through the 
+server as a response
+
+-------------------------------------------------------
+
+Delay a response manually:
+  setTimeout(() => res.end(routeResponseMap[req.url]), 2000);
+
+-------------------------------------------------------
+
+write a route:
+ 
+router.get("/WHATYOUWANTTOROUTE", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.TYPE);
+  utils.getFile("FILELOCATION", res);
+});
+
+----------------------
+
+when using Express.js you need to use:
+  npm install express -S  
+           OR 
+ npm install express --save
+
+--------------------------------
+
+Set up database:
+
+mongod port = 37550
+makenobackup
+cd /nobackup/aohernan
+mkdir demo 
+cd demo 
+mkdir documnets
+numactl --interleave=all mongod -port 37550 --dbpath documnets
+
+---------------------------
+
+check database results:
+ after closing node: 
+mongo silo.cs.indiana.edu:37550
+show dbs
+use confetti_cuisine
+show collections
+var a = db.getCollection("subscribers")
+a.find()
+
+----------------------------
+
+ All you need to do to get set up is let
+Mongoose know that you want to use native ES6 promises by adding mongoose.Promise
+= global.Promise near the top of main.js. Now with each query made, you can choose to
+return the normal database response or a promise containing that response. 
