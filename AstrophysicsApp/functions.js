@@ -31,6 +31,24 @@ function AstrophysicsCalculator() {
     const speed = (constants.k * temp / mmw) ** 0.5;
     return units.m_s.to(speed, units.km_s);
   }
+  function calculateGravitationalRedshift(mass, distance) {
+    const m = units.kg.to(mass, units.M_sun);
+    const r = units.m.to(distance, units.km);
+    const z = 1 - (3 * constants.G * m / (r * constants.c ** 2));
+    return z;
+  }
+  function calculateBolometricLuminosity(temperature, radius) {
+    const temp = units.K.to(temperature, units.K);
+    const r = units.m.to(radius, units.R_sun);
+    const luminosity = 4 * Math.PI * constants.sigma * temp ** 4 * r ** 2;
+    return units.W.to(luminosity, units.L_sun);
+  }
+  function calculateEscapeVelocity(mass, distance) {
+    const m = units.kg.to(mass, units.M_sun);
+    const r = units.m.to(distance, units.AU);
+    const velocity = Math.sqrt(2 * constants.G * m / r);
+    return units.m_s.to(velocity, units.km_s);
+  }
 
   return (
     <div>
